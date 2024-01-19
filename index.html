@@ -57,6 +57,15 @@ document.addEventListener('DOMContentLoaded', function() {
       botonDireccion.style.opacity = '0'; // Ocultar el botón
       botonDireccion.style.pointerEvents = 'none'; // Deshabilitar eventos de clic
     }
+
+    if (currentTime >= 44) {
+      botonAsistencia.style.opacity = '1'; // Mostrar el botón
+      botonAsistencia.style.pointerEvents = 'auto'; // Habilitar eventos de clic
+    } else {
+      botonAsistencia.style.opacity = '0'; // Ocultar el botón
+      botonAsistencia.style.pointerEvents = 'none'; // Deshabilitar eventos de clic
+    }
+      
   });
 
   video.addEventListener('ended', function() {
@@ -152,17 +161,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <div id="button-container">
 
+             <a id="boton-asistencia"
+        href="https://api.whatsapp.com/send?phone=+526671762991&text=%C2%A1Hola%21+Muchas+gracias+por+la+invitaci%C3%B3n%2C+ah%C3%AD+estaremos%21%21+%F0%9F%A5%B3"
+        class="button">
+        <i class="fab fa-whatsapp"></i>CONFIRMAR ASISTENCIA</a>
+
+        
       <a id="boton-direccion" href="https://maps.app.goo.gl/MCzXSoXDrqyaDjTf9"
         class="button fa-solid fa-location-dot"
         style="color: #ffffff;"> <i class="fas fa-map-marker-alt"></i> VER
         UBICACIÓN
       </a>
 
-           <a id="boton-asistencia"
-        href="https://api.whatsapp.com/send?phone=+526671762991&text=%C2%A1Hola%21+Muchas+gracias+por+la+invitaci%C3%B3n%2C+ah%C3%AD+estaremos%21%21+%F0%9F%A5%B3"
-        class="button">
-        <i class="fab fa-whatsapp"></i>CONFIRMAR ASISTENCIA</a>
-
+      
     <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"
       crossorigin="anonymous"></script>
   </body>
